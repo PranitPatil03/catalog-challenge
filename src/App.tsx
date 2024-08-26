@@ -1,12 +1,11 @@
-import { Button } from './components/ui/button'
+import Home from "./components/Home";
 
 function App() {
-
   return (
-    <>
-      <Button>Button</Button>
-    </>
-  )
+    <div className="w-full h-screen flex justify-center items-center">
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;

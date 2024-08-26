@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Chart from "./Chart";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("Chart");
@@ -7,7 +8,7 @@ const Home = () => {
   const renderContent = () => {
     switch (activeTab) {
       case "Chart":
-        return <p className="text-center py-4">Summary content here</p>;
+        return <Chart />;
       case "Summary":
         return <p className="text-center py-4">Summary content here</p>;
       case "Statistics":

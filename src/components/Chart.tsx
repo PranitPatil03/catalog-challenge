@@ -1,24 +1,36 @@
+import { Button } from "./ui/button";
+import { CirclePlus, Maximize2 } from "lucide-react";
+import { useState } from "react";
+
 const Chart = () => {
+  const [selectedPeriod, setSelectedPeriod] = useState("1w");
+
   return (
     <div className="flex justify-between items-center">
-      <button className="px-3 py-1 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">
-        Fullscreen
-      </button>
-      <button className="px-3 py-1 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">
-        Compare
-      </button>
+      <div className="flex space-x-2">
+        <Button className="px-3 py-1 bg-white rounded hover:bg-gray-50 text-gray-500">
+          <Maximize2 className="w-6 h-6 mr-2" />
+          <span className="text-lg">Fullscreen</span>
+        </Button>
+        <Button className="px-3 py-1 bg-white rounded hover:bg-gray-50 text-gray-500">
+          <CirclePlus className="w-6 h-6 mr-2 " />
+          <span className="text-lg">Compare</span>
+        </Button>
+      </div>
+
       <div className="flex space-x-2">
         {["1d", "3d", "1w", "1m", "6m", "1y", "max"].map((period) => (
-          <button
+          <Button
             key={period}
-            className={`px-3 py-1 rounded ${
-              period === "1w"
-                ? "bg-indigo-500 text-white"
-                : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+            onClick={() => setSelectedPeriod(period)}
+            className={`px-3 py-1 rounded text-lg text-gray-500 ${
+              period === selectedPeriod
+                ? "bg-[#4B41EF] text-white"
+                : "text-gray-500 bg-slate-50 hover:bg-slate-50"
             }`}
           >
             {period}
-          </button>
+          </Button>
         ))}
       </div>
     </div>

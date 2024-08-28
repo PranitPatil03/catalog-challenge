@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        moderustic: ["Moderustic", "sans-serif"],
+        moderustic: ["Moderustic"],
       },
       colors: {
         border: "hsl(var(--border))",

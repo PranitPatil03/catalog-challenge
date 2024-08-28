@@ -23,8 +23,8 @@ Check out the live version of this project [Catalog on Vercel](https://catalog-c
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/PranitPatil03/figma-to-react-conversion.git
-   cd figma-to-react-conversion
+   git clone https://github.com/PranitPatil03/catalog-challenge.git
+   cd catalog-challenge
    ```
 
 2. **Install dependencies:**
@@ -37,6 +37,12 @@ Check out the live version of this project [Catalog on Vercel](https://catalog-c
    npm start
    ```
    The app will be available at `http://localhost:3000`.
+
+## API Reference
+
+This application fetches data from a Coingecko API:
+
+- **Bitcoin Price:** `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1`
 
 ## Screenshots
 ![Project Screenshot](https://github.com/user-attachments/assets/4f1cd7e9-cc8a-4ba6-b2d2-00fd21bd94f2)
